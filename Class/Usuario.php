@@ -19,7 +19,7 @@ class Usuario
 
         try {
 
-            $link = Conexion::conec1tar();
+            $link = Conexion::conectar();
             $sql = "INSERT INTO usuarios (usr_id, usr_nombre, usr_apellido, usr_email, usr_pass)
                     VALUES (NULL , :usr_nombre, :usr_apellido, :usr_email, :usr_pass )";
             $stmt = $link->prepare($sql);
